@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web To Lead Form</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
@@ -13,7 +14,8 @@
     
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DF9000000dilG"
      method="POST" onsubmit="beforesubmit()">
-    
+     <input type=hidden name='captcha_settings' 
+     value='{"keyname":"WebToLeadBootCamp","fallback":"true","orgId":"00DF9000000dilG","ts":""}'>
     <input type=hidden name="oid" value="00DF9000000dilG">
     <input type=hidden name="retURL" value="https://lmadhu7.github.io/web-to-lead-bootcamp/thanks.html">
     <input type="hidden" name="Lead_Date__c" class="outputdate">
@@ -60,6 +62,9 @@
            /></span><br>-->
     
     <input type="submit" name="submit" class="submit">
+    <div class="g-recaptcha" 
+    data-sitekey="6Le_7hQqAAAAAFqPqcGffuYK8q_5BsyAAqJY1nkd">
+    </div><br>
     
     </form>
     
